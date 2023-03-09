@@ -1,38 +1,212 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0 0;
+  font-family: 'Genos', sans-serif;
+  font-size: 24px;
+  color: white;
+  /* border: 1px solid red; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* HEADING */
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+  height: 80px;
+  font-size: 32px;
+  /* border: 1px solid red; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* OPTIONS */
+.options {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 30px 0;
+  
+  /* border: 1px solid red; */
+}
+
+.number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60px;
+  width: 710px;
+  /* border: 1px solid black; */
+}
+
+.toggle-button-on {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 60px;
+  width: 550px;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* border: 2px solid red; */
 }
 
-.App-link {
-  color: #61dafb;
+.toggle-button-off {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 550px;
+  margin-top: 10px;
+  /* border: 2px solid red; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.toggle-button-off:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.SmallLetters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 550px;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* border: 1px solid black; */
+}
+
+.CapitalLetters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 550px;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* border: 1px solid black; */
+}
+
+.Numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 550px;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* border: 1px solid black; */
+}
+
+.SpecialChars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 550px;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* border: 1px solid black; */
+}
+
+/* PASSWORD */
+.password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 160px;
+  /* border: 1px solid red; */
+}
+
+.generate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* border: 1px solid black; */
+}
+
+.generate:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.generate:active {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 670px;
+  height: 80px;
+  padding: 0 20px;
+  background-color: #9996968b;
+  /* border: 1px solid black; */
+}
+
+.result p {
+  width: 520px;
+  height: 70px;
+  word-wrap: break-word;
+  overflow: auto;
+  color: black;
+  font-weight: 700;
+  /* border: 1px solid black; */
+}
+
+.result p::-webkit-scrollbar {
+  display: none;
+}
+
+.result input {
+  width: 120px;
+  height: 60px;
+  font-family: 'Genos', sans-serif;
+  font-size: 24px;
+  border-radius: 20px;
+  color: #583939;
+  background-color: #79d250a9;
+}
+
+.result input:hover {
+  color: #322020;
+  background-color: #79d250;
+}
+
+.result input:active {
+  color: #583939;
+  background-color: #4e8634;
+}
+
+@media screen and (max-width: 700px){
+  .App{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    overflow: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .heading, .number, .toggle-button-off, .toggle-button-on,
+  .generate, .result {
+    width: 500px;
+  }
+
+  .result {
+    justify-content: space-evenly;
+  }
+
+  .result p {
+    width: 400px;
+  }
+
+  .result input {
+    width: 70px;
   }
 }
