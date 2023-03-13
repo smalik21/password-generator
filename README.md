@@ -5,7 +5,7 @@ This is a password generator app built using React. It provides the following op
 - Select whether to include small alphabets, capital alphabets, numbers, and special characters
 - Generates a password that can be copied using a button
 ## Installation
-- Clone the repository: `git clone https://github.com/<username>/<repo-name>.git`
+- Clone the repository: `git clone https://github.com/smalik21/password-generator.git`
 - Install dependencies: `npm install`
 - Run the app: `npm start`
 ## Usage
