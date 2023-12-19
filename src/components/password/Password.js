@@ -1,19 +1,19 @@
 import Generate from './Generate';
 import Result from './Result';
 
-export default function Password(props) {
+export default function Password({ onClick, password }) {
 
     function handleClick(event) {
-        props.onClick();
+        onClick();
     }
 
     return (
         <div className="password">
-            <Generate 
+            <Generate
                 onClick={handleClick}
             />
             <Result
-                pass={props.password}
+                password={password}
             />
         </div>
     );

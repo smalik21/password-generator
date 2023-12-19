@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export default function Number(props) {
+export default function Number({ onChange }) {
 
     const [number, setNumber] = useState("10");
 
     function handleChange(event) {
-        props.onChange(event);
+        onChange(event);
         setNumber(event.target.value);
     }
 
@@ -13,7 +13,7 @@ export default function Number(props) {
         <div className="number">
             <p>NUMBER OF CHARACTERS</p>
             <input onChange={handleChange} type="range" value={number} min="6" max="100" />
-            <p>{number}</p>
+            <p className="number-count">{number}</p>
         </div>
     );
 }

@@ -1,7 +1,7 @@
-export default function Generate(props) {
+export default function Generate({ onClick }) {
 
     function handleClick() {
-        props.onClick();
+        onClick();
     }
 
     return (
